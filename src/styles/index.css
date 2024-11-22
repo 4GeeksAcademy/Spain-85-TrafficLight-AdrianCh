@@ -1,12 +1,116 @@
+body {
+    background-color: lightgray;
+}
 
-/* 
+/* Blur effect de https://www.youtube.com/watch?v=ezP4kbOvs_E , que lo vi hace tiempo*/
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.dot-red {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(107, 1, 13);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
 
-*/
+.add-blur-red::after {
+    content:'';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index:-1;
+    border-radius: 50%;
+    padding: 50px;
+    filter: blur(20px);
+}
+
+.dot-yellow {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(160, 127, 38);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.add-blur-yellow::after{
+    content:'';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index:-1;
+    border-radius: 50%;
+    padding: 50px;
+    filter: blur(20px);
+}
+
+.dot-green {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(16, 75, 15);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.add-blur-green::after{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(76, 245, 66);
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index:-1;
+    border-radius: 50%;
+    padding: 50px;
+    filter: blur(20px);
+}
+
+.pole-line {
+    width: 20px;
+    background-color: rgb(33, 36, 43);
+    height:570px;
+    z-index: -1;
+    position:absolute;
+    top: 25%;
+    right: 35%;
+    
+}
+
+.walker-red {
+    background-color: rgb(107, 1, 13);
+    display: inline-block;
+    position: relative;
+}
+
+.walker-green {
+    background-color: rgb(16, 75, 15);
+    display: inline-block;
+    position: relative;
+}
+
+.walker-yellow {
+    background-color: rgb(160, 127, 38);
+    display: inline-block;
+    position: relative;
+}
+
+.dot-button {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(78, 190, 49);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 2px solid gray ;
+}
