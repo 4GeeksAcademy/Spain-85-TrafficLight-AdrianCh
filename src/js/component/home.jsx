@@ -58,9 +58,9 @@ const Home = () => {
 			setTimeout(() => {
 				setActiveLightCar("green")
 				setActiveLightWalker("red")
-				setActiveCountdownPedestrian(10)
 				trafficLightButtonClicked = false
-			}, 16000)
+			}, 17000)
+
 		}
 	}
 
@@ -70,16 +70,14 @@ const Home = () => {
 		const countdownInterval = setInterval(() => {
 			if (counter > 0) {
 				counter--;
+				
 				setActiveCountdownPedestrian(counter);
 			} else {
-				counter = 10
+				setActiveCountdownPedestrian(10)
 				clearInterval(countdownInterval);
 			}
 		}, 1000);
 	}
-
-
-
 
 	return (
 		<>
