@@ -83,8 +83,9 @@ const Home = () => {
 		<>
 		<div className="position-absolute bottom-0 end-0 me-3" >
 			<div className="d-flex flex-column bg-dark rounded-2">
-				{lightCar.map((lightCar) => (
+				{lightCar.map((lightCar, index) => (
 					<span 
+					key={index}
 					className={`
 						mx-auto my-2 p-4 dot-${lightCar.colour} 
 						${activeLightCar === lightCar.colour ? lightCar.className : ""} 
@@ -95,8 +96,9 @@ const Home = () => {
 				))}
 			</div>
 			<div className="d-flex flex-column bg-dark rounded-2 mt-5">
-				{lightWalker.map((lightWalker) => (
+				{lightWalker.map((lightWalker, index) => (
 				<span
+				key={index}
 				className={`
 					mx-auto my-1 rounded-5 p-3 walker-${lightWalker.colour}
 					${activeLightWalker === lightWalker.colour ? lightWalker.className : ""}
